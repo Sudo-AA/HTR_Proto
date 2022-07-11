@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
+        android:background="@drawable/photo_1582738411706_bfc8e691d1c2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="128dp"
+            android:foreground="@drawable/tremortremor"
+            app:layout_constraintBottom_toTopOf="@+id/connect_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.046" />
+
+        <Button
+            android:id="@+id/connect_btn"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="verdana"
+            android:shadowColor="@color/black"
+            android:text="CONNECT TO DEVICE"
+            android:textFontWeight="1000"
+            android:textSize="18dp"
+            app:icon="@android:drawable/stat_sys_data_bluetooth"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.748" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="15dp"
+            android:fontFamily="arial"
+            android:text="HAND TREMOR REDUCER 1.0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textFontWeight="1000"
+            android:textSize="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:fontFamily="arial"
+            android:text="WELCOME !!"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textFontWeight="1000"
+            android:textSize="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/about"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/picture1" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/connect_btn"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="160dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginBottom="44dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:max="100"
+            android:progress="20"
+            android:secondaryProgress="20"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/calibration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/photo_1582738411706_bfc8e691d1c2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.491">
+
+        <TextView
+            android:id="@+id/comp"
+            android:layout_width="600dp"
+            android:layout_height="21dp"
+            android:layout_above="@+id/progressBar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="arial"
+            android:text="calibrating ......"
+            android:textColor="@color/black"
+            android:textFontWeight="1000"
+            android:textSize="15dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.657" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_above="@+id/calibrate"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="5dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:max="100"
+            android:progress="20"
+            android:secondaryProgress="20"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/calibrate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.369" />
+
+        <TextView
+            android:id="@+id/tremor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/vibration"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="arial"
+            android:text="HAND TREMOR:"
+            android:textColor="@color/black"
+            android:textFontWeight="1000"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.183"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.522" />
+
+        <TextView
+            android:id="@+id/vibration"
+            android:layout_width="336dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/comp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="arial"
+            android:text="VIBRATION OUTPUT :"
+            android:textColor="@color/black"
+            android:textFontWeight="1000"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.179"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.569" />
+
+        TextView
+        android:id="@+id/graph_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linechartx"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="arial"
+        android:text="CALIBRATION LINE GRAPH"
+        android:textColor="@color/black"
+        android:textFontWeight="1000"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522" />
+
+        <Button
+            android:id="@+id/calibrate"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/goto_record"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="verdana"
+            android:shadowColor="@color/black"
+            android:text="CALIBRATE DEVICE"
+            android:textFontWeight="1000"
+            android:textSize="20dp"
+            app:icon="@android:drawable/ic_menu_manage"
+            app:layout_constraintBottom_toTopOf="@+id/goto_record"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.98" />
+
+
+        <Button
+            android:id="@+id/goto_record"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="13dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="verdana"
+            android:shadowColor="@color/black"
+            android:text="HAND TREMOR RECORDS"
+            android:textFontWeight="1000"
+            android:textSize="20dp"
+            app:icon="@android:drawable/ic_menu_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_above="@+id/tremor"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/button_tray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/pos_button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="POSTURAL TREMOR"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
+                <Button
+                    android:id="@+id/res_button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="RESTING TREMOR"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
+                <Button
+                    android:id="@+id/act_button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="ACTION TREMOR"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph_tray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.96"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/postural_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    android:visibility="visible"
+                    android:weightSum="3">
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/plinechartx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/plinecharty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/plinechartz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/resting_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    android:visibility="gone"
+                    android:weightSum="3">
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/rlinechartx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/rlinecharty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/rlinechartz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/action_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    android:visibility="gone"
+                    android:weightSum="3">
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/alinechartx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/alinecharty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/alinechartz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/records"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/photo_1582738411706_bfc8e691d1c2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/back_btn"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="53dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="verdana"
+            android:shadowColor="@color/black"
+            android:text="BACK  "
+            android:textFontWeight="1000"
+            android:textSize="18dp"
+            app:icon="@android:drawable/ic_menu_revert"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.951" />
+
+        <Button
+            android:id="@+id/measure"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/back_btn"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="53dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="verdana"
+            android:shadowColor="@color/black"
+            android:text="MEASUREMENT DETAILS"
+            android:textFontWeight="1000"
+            android:textSize="15dp"
+            app:icon="@android:drawable/ic_menu_help"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.951" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recordList"
+            android:layout_width="wrap_content"
+            android:layout_height="545dp"
+            android:layout_above="@+id/textView3"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="391dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/measure"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/black"
+            android:fontFamily="verdana"
+            android:text="HAND TREMOR RECORDS"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textFontWeight="1000"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/postural"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
+        android:background="@drawable/photo_1582738411706_bfc8e691d1c2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <Button
+            android:id="@+id/ready_pos"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="51dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="verdana"
+            android:shadowColor="@color/black"
+            android:text="READY"
+            android:textFontWeight="1000"
+            android:textSize="20dp"
+            app:icon="@android:drawable/ic_media_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.951" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ready_pos"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/postest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="25dp"
+                    android:fontFamily="arial"
+                    android:text="POSTURAL TREMOR TEST"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textFontWeight="1000"
+                    android:textSize="28sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.567"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/postest"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="31dp"
+                    android:src="@drawable/postural" />
+
+                <TextView
+                    android:id="@+id/direction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView3"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Position your limb forward against gravity like in the image.\n \nReminder : \nThe accelerometer sensor is sensitive. Please be sure your limb or hand is properly positioned, like in the image above, because every wrong action may affect the hand tremor reading."
+                    android:textAlignment="inherit"
+                    android:textColor="@color/black"
+                    android:textFontWeight="1000"
+                    android:justificationMode="inter_word"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.567"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/resting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
+        android:background="@drawable/photo_1582738411706_bfc8e691d1c2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/ready_res"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="51dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="verdana"
+            android:shadowColor="@color/black"
+            android:text="READY"
+            android:textFontWeight="1000"
+            android:textSize="20dp"
+            app:icon="@android:drawable/ic_media_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.951" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ready_res"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/restest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="25dp"
+                    android:fontFamily="arial"
+                    android:text="RESTING TREMOR TEST"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textFontWeight="1000"
+                    android:textSize="28sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.567"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/restest"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="31dp"
+                    android:src="@drawable/resting" />
+
+                <TextView
+                    android:id="@+id/direction1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView4"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Support your limb with your lap, and be sure your limb is fully supported against gravity and the muscles are not voluntarily activated like in the image.\n \nReminder : \nThe accelerometer sensor is sensitive. Please be sure your limb or hand is properly positioned like in the image above, because every wrong action may affect the hand tremor reading"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/black"
+                    android:textFontWeight="1000"
+                    android:textSize="20sp"
+                    android:justificationMode="inter_word"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.567"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/action"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
+        android:background="@drawable/photo_1582738411706_bfc8e691d1c2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    <Button
+        android:id="@+id/ready_act"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="301dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="verdana"
+        android:shadowColor="@color/black"
+        android:text="READY"
+        android:textFontWeight="1000"
+        android:textSize="20dp"
+        app:icon="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ready_act"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/acttest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="26dp"
+                    android:fontFamily="arial"
+                    android:text="ACTION TREMOR TEST"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textFontWeight="1000"
+                    android:textSize="28sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.567"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/acttest"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="31dp"
+                    android:src="@drawable/action" />
+
+                <TextView
+                    android:id="@+id/direction2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView5"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Hold any unbreakable object in your hand, for example, a plastic cup. While holding the cup, position your limb forward against gravity like in the image above. \n \nReminder : \nThe accelerometer sensor is sensitive. Please be sure your limb or hand is properly positioned like in the image above, because every wrong action may affect the hand tremor reading"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/black"
+                    android:textFontWeight="1000"
+                    android:justificationMode="inter_word"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.567"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/about_us"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
+        android:background="@drawable/photo_1582738411706_bfc8e691d1c2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:layout_above="@+id/about_back"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="30dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="4.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:text="ABOUT US"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="30sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="0dp"
+                        android:text="AARON ADONIS J. VELASCO"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="22sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="20dp"
+                        android:text="adonis12899@gmail.com"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/restest"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginEnd="31dp"
+                        app:srcCompat="@drawable/_1674713_2469279583304402_381839699469139968_n" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingTop="10dp"
+                        android:text="PROJECT MANAGER, SYSTEM ANALYST, AND PROGRAMMER"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingTop="10dp"
+                        android:text="	&#34; The secret of getting ahead is getting started.&#34; \n– Mark Twain "
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="0dp"
+                        android:text="JOSHUA BOY B. BASILLA"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="22sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="20dp"
+                        android:text="joshuabasilla11@gmail.com"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/restest"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginEnd="31dp"
+                        app:srcCompat="@drawable/_1674713_2469279583304402_381839699469139968_n__1_" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingTop="10dp"
+                        android:text="PROGRAMMER  AND TREASURER"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingTop="10dp"
+                        android:text="&#34; Pretty words aren't always true, and True words aren't always pretty.&#34;"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="0dp"
+                        android:text="JOVAN B. OLAGUER"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="22sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="20dp"
+                        android:text="olaguerbendoyjovan@gmail.com"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/restest"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginEnd="31dp"
+                        app:srcCompat="@drawable/_1674713_2469279583304402_381839699469139968_n__2_" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingTop="10dp"
+                        android:text="TECHNICAL WRITER"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingTop="10dp"
+                        android:text="&#34;Where there's a will, there's a way.&#34;"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="0dp"
+                        android:text="JIMMY S. ALLERA"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="22sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="20dp"
+                        android:text="jimmyallera990@gmail.com"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/restest"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginEnd="31dp"
+                        app:srcCompat="@drawable/_1674713_2469279583304402_381839699469139968_n__3_" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingTop="10dp"
+                        android:text="SOFTWARE TESTER"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingTop="10dp"
+                        android:text="&#34;TRUST AND LOVE YOURSELF FIRST..&#34;"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/about_back"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="29dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="verdana"
+            android:shadowColor="@color/black"
+            android:text="BACK   "
+            android:textFontWeight="1000"
+            android:textSize="20dp"
+            app:icon="@android:drawable/ic_menu_revert"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.951" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/about_measure"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
+        android:background="@drawable/photo_1582738411706_bfc8e691d1c2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:layout_above="@+id/measure_back"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="30dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="4.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:text="MEASUREMENT DETAILS"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="30sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="0dp"
+                        android:text="Postural Tremor"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="22sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="20dp"
+                        android:text="5 to 9 Hz"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/restest"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginEnd="31dp"
+                        app:srcCompat="@drawable/maxresdefault__1_" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:padding="20dp"
+                        android:paddingTop="10dp"
+                        android:text="	&#34; Postural tremor occurs when the limb is placed in a fixed position
+against gravity, and may continue or increase during movement. Postural tremor is subdivided
+into physiologic tremor, ET, alcohol or drug withdrawal, metabolic disturbance, drug-induce
+tremor, and psychogenic tremor &#34;"
+                        android:justificationMode="inter_word"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="0dp"
+                        android:text="Resting Tremor"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="22sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="20dp"
+                        android:text="3 to 6 Hz"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/restest"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginEnd="31dp"
+                        app:srcCompat="@drawable/unnamed" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:padding="20dp"
+                        android:paddingTop="10dp"
+                        android:text="	&#34; Rest tremor occurs when the limb is completely at rest against gravity; that is, the
+affected body part continues shaking when the patient is sitting and relaxed (Louis and Ferreira,
+2010). The affected body part, however, can stop shaking when the patient intentionally moves
+it. This type of tremor includes Parkinson’s disease, multiple-systems atrophy, supranuclear
+palsy, and drug-induced tremor. &#34;"
+                        android:justificationMode="inter_word"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="0dp"
+                        android:text="Action Tremor"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="22sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:paddingBottom="20dp"
+                        android:text="3 to 10 Hz"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/restest"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginEnd="31dp"
+                        app:srcCompat="@drawable/dreba_puodelis_rankose" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="arial"
+                        android:padding="20dp"
+                        android:paddingTop="10dp"
+                        android:text="&#34;Action tremor takes place only when an affected body part moves to change
+position intentionally. Action tremor is subdivided into three types: cerebellar lesion, rubral
+tremor, and psychogenic tremor.&#34;"
+                        android:justificationMode="inter_word"
+                        android:textColor="@color/black"
+                        android:textFontWeight="1000"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.567"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/measure_back"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="29dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="verdana"
+            android:shadowColor="@color/black"
+            android:text="BACK   "
+            android:textFontWeight="1000"
+            android:textSize="20dp"
+            app:icon="@android:drawable/ic_menu_revert"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.951" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/handprefer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
+        android:background="@drawable/photo_1582738411706_bfc8e691d1c2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="top|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="25dp"
+                    android:fontFamily="arial"
+                    android:text="CHOOSE THE HAND WHERE THE DEVICE IS PLACED"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top|center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginEnd="31dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/tremor1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="25dp"
+                        android:fontFamily="arial"
+                        android:text="LEFT HAND"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top|center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginEnd="31dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/tremortremor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="25dp"
+                        android:fontFamily="arial"
+                        android:text="RIGHT HAND"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/righthand"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="301dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginEnd="53dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="verdana"
+                    android:shadowColor="@color/black"
+                    android:text="RIGHT HAND   "
+                    android:textFontWeight="1000"
+                    android:textSize="20dp"
+                    app:icon="?android:attr/textCheckMark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.951" />
+
+                <Button
+                    android:id="@+id/lefthand"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="301dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginEnd="53dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="verdana"
+                    android:shadowColor="@color/black"
+                    android:text="LEFT HAND   "
+                    android:textFontWeight="1000"
+                    android:textSize="20dp"
+                    app:icon="?android:attr/textCheckMark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.951" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <ProgressBar
+                    android:id="@+id/progressBar3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/black"
+                    android:max="100"
+                    android:progress="20"
+                    android:secondaryProgress="20"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
